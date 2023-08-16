@@ -1,15 +1,15 @@
-#Diabetes-Prediction-System
+**Diabetes-Prediction-System**
 
 Introducing our revolutionary GitHub repository, dedicated to our advanced diabetes prediction web application. This repository showcases the seamless integration of machine learning and web development, utilizing the logistic regression algorithm to provide accurate diabetes predictions. Our comprehensive dataset and well-optimized logistic regression model ensure the reliability of the predictions. The repository includes the complete source code for both the machine learning model and the web interface, empowering developers to explore, contribute, and enhance the platform. By leveraging the power of Flask for the backend and HTML/CSS for the user interface, the repository serves as a valuable resource for those interested in creating similar health prediction applications. 
 
 
-#Project Overview: Diabetes Prediction System
+**Project Overview: Diabetes Prediction System**
 
-#1. Introduction:
+**1. Introduction:**
 
 The Diabetes Prediction System is a web application that allows users to predict the likelihood of diabetes based on medical data. Users can register, log in, upload medical datasets, clean data, train a machine learning model, and make predictions using the trained model.
 
-#2. Key Features:
+**2. Key Features:**
 
   --> User Registration and Login: Users can create accounts, log in, and log out. Passwords are securely hashed using Bcrypt.
 
@@ -23,7 +23,7 @@ The Diabetes Prediction System is a web application that allows users to predict
 
   --> Responsive User Interface: The frontend is built using HTML templates, Bootstrap for styling, and Jinja2 for dynamic content rendering.
 
-#3. Code Structure:
+**3. Code Structure:**
 
   --> app.py: The main application file containing the Flask app, database setup, route definitions, and user management functions.
 
@@ -35,7 +35,8 @@ The Diabetes Prediction System is a web application that allows users to predict
 
   --> analysis-script.js: A frontend JavaScript script for handling data analysis and visualization.
 
-#4. How It Works:
+**4. How It Works:**
+
   --> Users register and log in to the system.
 
   --> They upload a diabetes dataset in CSV format.
@@ -50,7 +51,8 @@ The Diabetes Prediction System is a web application that allows users to predict
 
   --> The trained model predicts the likelihood of diabetes.
 
-#5. Technologies Used:
+**5. Technologies Used:**
+
   --> Flask: Web framework for creating the application.
 
   --> SQLAlchemy: ORM for managing the database and user data.
@@ -63,7 +65,8 @@ The Diabetes Prediction System is a web application that allows users to predict
 
   --> Jinja2: Template engine for rendering dynamic content in HTML templates.
 
-#6. Usage:
+**6. Usage:**
+
   --> Clone the repository using `git clone <repository-link>`.
 
   --> Install dependencies using `pip instalL-r requirements.txt`.
@@ -74,7 +77,7 @@ The Diabetes Prediction System is a web application that allows users to predict
 
   --> Access the application in your web browser at `http://localhost:8080`.
 
-Acknowledgments:
+**Acknowledgments:**
 
 This project was created by @bizzorotical-ank01 and is intended for educational purposes.
 This repository provides the foundation for a web application that allows users to register, log in, clean a dataset, train a diabetes prediction model, and predict outcomes based on user inputs. It integrates both front-end and back-end functionalities to create a full-fledged web application. 
