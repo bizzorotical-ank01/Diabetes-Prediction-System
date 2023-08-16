@@ -1,0 +1,106 @@
+
+<!--this file will make the layout of a web page where you will see training and testing of your files for predictions-->
+
+{% extends 'base.html' %}
+
+{% block title %} Analysis {% endblock %}
+
+{% block login_logout %}
+{% if logged_in %}
+<a class="nav-link" href="/logout">LOG OUT <span class="sr-only">(current)</span></a>
+{% else %}
+<a class="nav-link" href="/login">LOG IN <span class="sr-only">(current)</span></a>
+{% endif %}
+{% endblock %}
+
+{% block body %}
+
+<div class="container" style="margin-bottom: 3%;">
+
+    <!-- START FILE INPUT CARD -->
+    <div style="padding-top:10%" id="input_card" class="row align-items-center justify-content-center">
+        <div class="card text-center">
+            <div class="card-header bg-dark text-light">
+                <strong>Load The Diabetes Dataset</strong>
+            </div>
+
+            <div class="card-body text-light bg-secondary">
+                <h5 class="card-title">Once Loaded The Data Will Be Displayed in Tabular View</h5>
+                <p class="card-text">
+                    Upload the Diabetes Dataset located at: <a href="#">Diabetes Predection Dataset</a>.
+                    The Dataset must have following columns in it because first five are considered as features and last
+                    one is considered
+                    target value for Logistic Regression model. Changes in the Dataset will lead to Bias or
+                    training/preprocessing errors. <br><br>
+                    Headers : 'Age', 'BP', 'BMI', 'Glucose'
+                </p>
+
+                <div class="form-group ">
+                    <div class="custom-file pmd-custom-file-outline">
+                        <input type="file" class="custom-file-input" id="load_data" accept=".csv">
+                        <label class="custom-file-label" for="load_data">Choose file</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- END FILE INPUT CARD -->
+
+    <!-- START TABULAR VIEW -->
+    <div id="tabular_view">
+        <div class="table-responsive" id="div_data_table" style="margin-bottom: 2%; margin-top: 2%;">
+            <h3 class="align-items-center justify-content-center"> Diabetes Dataset Loaded (RAW) </h3>
+            <table class="table table-light table-head-content-width" id="data_table">
+            </table>
+        </div>
+
+        <div class="table-responsive" id="div_clean_data_table" style="margin-top: 2%; margin-bottom: 6%;">
+            <h3 class="align-items-center justify-content-center"> Cleaned Dataset (Not Splitted) </h3>
+            <table class="table table-light table-head-content-width" id="clean_data_table"> </table>
+        </div>
+
+        <div class="table-responsive" id="div_train_data_table" style="margin-bottom: 6%;">
+            <h3 class="align-items-center justify-content-center"> 70% of Dataset to be used for Training </h3>
+            <table class="table table-light table-head-content-width" id="train_data_table"> </table>
+        </div>
+
+        <div class="table-responsive" id="div_test_data_table" style="margin-bottom: 3%;">
+            <h3 class="align-items-center justify-content-center"> 30% of Dataset to be used for Testing </h3>
+            <table class="table table-light table-head-content-width" id="test_data_table"> </table>
+        </div>
+    </div>
+    <!-- END TABULAR VIEW -->
+
+    <div id="btn-clean-data" class="d-flex flex-row-reverse">
+        <button type="button" class="btn btn-primary" onclick="cleanData()">Clean Data</button>
+    </div>
+
+    <div id="btn-train-model" class="d-flex flex-row-reverse">
+        <button type="button" class="btn btn-primary" onclick="trainModel()">Train Model</button>
+    </div>
+
+    <!-- SUCCESS MODAL AFTER TRAINING IS COMPLETED -->
+    <!-- Modal -->
+    <div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">  </h5>
+                </div>
+                <div id="modal-body" class="modal-body"> </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="javascript:window.location.href='/user_demographics';">User Demographics</button>
+                    <button type="button" class="btn btn-primary" onclick="javascript:window.location.href='/analysis';">
+                        Re-Train
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL CODE -->
+</div>
+
+<script src={{ url_for('static', filename='analysis-script.js') }}> </script>
+
+{% endblock %}
