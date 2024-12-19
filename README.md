@@ -2,8 +2,11 @@
 
 Introducing our revolutionary GitHub repository, dedicated to our advanced diabetes prediction web application. This repository showcases the seamless integration of machine learning and web development, utilizing the logistic regression algorithm to provide accurate diabetes predictions. Our comprehensive dataset and well-optimized logistic regression model ensure the reliability of the predictions. The repository includes the complete source code for both the machine learning model and the web interface, empowering developers to explore, contribute, and enhance the platform. By leveraging the power of Flask for the backend and HTML/CSS for the user interface, the repository serves as a valuable resource for those interested in creating similar health prediction applications. 
 
+---
 
 **Project Overview: Diabetes Prediction System**
+
+---
 
 **1. Introduction:**
 
@@ -42,6 +45,8 @@ The Diabetes Prediction System is a web application that allows users to predict
 - Users can input their medical data for prediction.
 - The trained model predicts the likelihood of diabetes.
 
+---
+
 **5. Technologies Used:**
 
 - **Flask:** Web framework for creating the application.
@@ -51,6 +56,8 @@ The Diabetes Prediction System is a web application that allows users to predict
 - **scikit-learn:** Machine learning library for data preprocessing and model training.
 - **Jinja2:** Template engine for rendering dynamic content in HTML templates.
 
+---
+
 **6. Usage:**
 
 - Clone the repository using `git clone <repository-link>`.
@@ -58,6 +65,8 @@ The Diabetes Prediction System is a web application that allows users to predict
 - Set up a virtual environment (optional but recommended).
 - Run the application using `python app.py`.
 - Access the application in your web browser at `http://localhost:8080`.
+
+---
 
 **Acknowledgments:**
 
